@@ -3,8 +3,8 @@ CXX = g++
 CC  = gcc
 
 # Flags
-CXXFLAGS = -std=c++23 -Wall -Wextra -I./include
-CFLAGS   = -Wall -Wextra -I./include
+CXXFLAGS = -std=c++23 -Wall -Wextra -I./include -MMD -MP
+CFLAGS   = -Wall -Wextra -I./include -MMD -MP
 
 # Libraries
 LIBS = -lglfw -lGL -lm -ldl
@@ -64,5 +64,7 @@ help:
 	@echo "  clean   - Remove build files"
 	@echo "  rebuild - Clean then build"
 	@echo "  help    - Show this help message"
+
+-include $(OBJECTS:.o=.d)
 
 .PHONY: all directories run clean rebuild help

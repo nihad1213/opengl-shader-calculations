@@ -10,7 +10,7 @@ int main() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 4);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow *Window = glfwCreateWindow(1200, 760, "Window", NULL, NULL);
+    GLFWwindow *Window = glfwCreateWindow(1200, 760, "Shader", NULL, NULL);
 
     if (!Window) {
         std::cout << "Window has failed to be created, terminating.\n";
